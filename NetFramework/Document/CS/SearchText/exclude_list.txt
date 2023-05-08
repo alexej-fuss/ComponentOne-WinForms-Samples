@@ -1,3 +1,0 @@
-SearchTextDebug.sln
-SearchTextDebug.csproj
-

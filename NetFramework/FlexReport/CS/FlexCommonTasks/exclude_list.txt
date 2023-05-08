@@ -1,3 +1,0 @@
-FlexCommonTasksDebug.sln
-FlexCommonTasksDebug.csproj
-

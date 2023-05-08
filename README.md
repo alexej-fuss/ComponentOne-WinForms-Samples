@@ -14,6 +14,8 @@ The samples reference, but do not include, the control packages. The control pac
 
 ## Building a Sample 
 
+* Common files needs to be copied into "DataDirectory" --> \MyDocuments\ComponentOne Samples\Common
+
 * .NET Framework samples require Visual Studio 2012 and above. 
 * .NET 6 samples will require Visual Studio 2019 and above.
 

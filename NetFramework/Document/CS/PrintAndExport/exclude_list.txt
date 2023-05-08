@@ -1,3 +1,0 @@
-PrintAndExportDebug.sln
-PrintAndExportDebug.csproj
-
