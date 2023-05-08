@@ -1,8 +1,0 @@
-## Tutorial19
-#### [Download as zip](https://grapecity.github.io/DownGit/#/home?url=https://github.com/GrapeCity/ComponentOne-WinForms-Samples/tree/master/NetFramework\List\CS\Tutorials\Tutorial19)
-____
-#### Using the LookUp Feature.
-____
-In this tutorial, you will learn how to use the LookUp feature to change the value of a C1Combo box.
-
-![screenshot](screenshot.png)

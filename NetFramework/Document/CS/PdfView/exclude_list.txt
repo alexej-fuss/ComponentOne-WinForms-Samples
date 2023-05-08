@@ -1,3 +1,0 @@
-PdfViewDebug.sln
-PdfViewDebug.csproj
-
