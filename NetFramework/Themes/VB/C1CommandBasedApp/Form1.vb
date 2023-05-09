@@ -74,7 +74,9 @@ Partial Public Class Form1
 	End Sub
 
 	Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
 		Dim path As String = Environment.GetFolderPath(Environment.SpecialFolder.Personal) & "\ComponentOne Samples\Common\"
+
 		If File.Exists(path & "c1nwind.mdb") Then
 			AppDomain.CurrentDomain.SetData("DataDirectory", path)
 		End If

@@ -2405,6 +2405,8 @@ Partial Class Form1
         '
         'c1FlexGrid1
         '
+        Me.c1FlexGrid1.AllowAddNew = True
+        Me.c1FlexGrid1.AllowDelete = True
         Me.c1FlexGrid1.ColumnInfo = resources.GetString("c1FlexGrid1.ColumnInfo")
         Me.c1FlexGrid1.DataSource = Me.employeesBindingSource
         Me.c1FlexGrid1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -2415,7 +2417,6 @@ Partial Class Form1
         Me.c1FlexGrid1.Rows.DefaultSize = 21
         Me.c1FlexGrid1.ShowThemedHeaders = C1.Win.C1FlexGrid.ShowThemedHeadersEnum.None
         Me.c1FlexGrid1.Size = New System.Drawing.Size(713, 616)
-        Me.c1FlexGrid1.StyleInfo = resources.GetString("c1FlexGrid1.StyleInfo")
         Me.c1FlexGrid1.TabIndex = 0
         Me.c1ThemeController1.SetTheme(Me.c1FlexGrid1, "(default)")
         Me.c1FlexGrid1.Tree.LineColor = System.Drawing.Color.FromArgb(CType(CType(124, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(0, Byte), Integer))
