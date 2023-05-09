@@ -329,15 +329,18 @@ Partial Class Form1
         Me.c1DockingTab2 = New C1.Win.C1Command.C1DockingTab()
         Me.c1DockingTabPage3 = New C1.Win.C1Command.C1DockingTabPage()
         Me.c1FlexGrid1 = New C1.Win.C1FlexGrid.C1FlexGrid()
-        Me.employeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.c1NWINDDataSet = New C1CommandBasedApp.C1NWINDDataSet()
         Me.c1DockingTabPage5 = New C1.Win.C1Command.C1DockingTabPage()
         Me.csMain = New C1.Win.C1Schedule.C1Schedule()
         Me.c1DockingTabPage6 = New C1.Win.C1Command.C1DockingTabPage()
         Me.c1GanttView1 = New C1.Win.C1GanttView.C1GanttView()
-        Me.employeesTableAdapter = New C1CommandBasedApp.C1NWINDDataSetTableAdapters.EmployeesTableAdapter()
-        Me.c1ThemeController1 = New C1.Win.C1Themes.C1ThemeController()
-        CType(Me.cchMain, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.employeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+      Me.c1NWINDDataSet = New C1NWINDDataSet()
+      Me.employeesTableAdapter = New C1NWINDDataSetTableAdapters.EmployeesTableAdapter()
+      Me.c1ThemeController1 = New C1.Win.C1Themes.C1ThemeController()
+      Me.c1NWINDDataSet1 = New C1CommandBasedApp.C1NWINDDataSet1()
+      Me.employeesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+      Me.EmployeesTableAdapter1 = New C1CommandBasedApp.C1NWINDDataSet1TableAdapters.EmployeesTableAdapter()
+      CType(Me.cchMain, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cneCFGFrozenColCount, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cneCFGFrozenRowCount, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cddcFontName, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -383,8 +386,6 @@ Partial Class Form1
         Me.c1DockingTab2.SuspendLayout()
         Me.c1DockingTabPage3.SuspendLayout()
         CType(Me.c1FlexGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.employeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.c1NWINDDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.c1DockingTabPage5.SuspendLayout()
         CType(Me.csMain, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.csMain.DataStorage.AppointmentStorage, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -400,7 +401,11 @@ Partial Class Form1
         CType(Me.c1GanttView1.DataStorage.PropertyStorage, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.c1GanttView1.DataStorage.ResourceStorage, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.c1GanttView1.DataStorage.TasksStorage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.employeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.c1NWINDDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.c1ThemeController1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.c1NWINDDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.employeesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ilMain2
@@ -2407,8 +2412,7 @@ Partial Class Form1
         '
         Me.c1FlexGrid1.AllowAddNew = True
         Me.c1FlexGrid1.AllowDelete = True
-        Me.c1FlexGrid1.ColumnInfo = resources.GetString("c1FlexGrid1.ColumnInfo")
-        Me.c1FlexGrid1.DataSource = Me.employeesBindingSource
+        Me.c1FlexGrid1.ColumnInfo = "10,1,0,0,0,-1,Columns:"
         Me.c1FlexGrid1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.c1FlexGrid1.Font = New System.Drawing.Font("Segoe UI", 8.0!)
         Me.c1FlexGrid1.Location = New System.Drawing.Point(0, 0)
@@ -2420,16 +2424,6 @@ Partial Class Form1
         Me.c1FlexGrid1.TabIndex = 0
         Me.c1ThemeController1.SetTheme(Me.c1FlexGrid1, "(default)")
         Me.c1FlexGrid1.Tree.LineColor = System.Drawing.Color.FromArgb(CType(CType(124, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(0, Byte), Integer))
-        '
-        'employeesBindingSource
-        '
-        Me.employeesBindingSource.DataMember = "Employees"
-        Me.employeesBindingSource.DataSource = Me.c1NWINDDataSet
-        '
-        'c1NWINDDataSet
-        '
-        Me.c1NWINDDataSet.DataSetName = "C1NWINDDataSet"
-        Me.c1NWINDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'c1DockingTabPage5
         '
@@ -2846,9 +2840,33 @@ Partial Class Form1
         Me.c1GanttView1.ToolbarBackColor = System.Drawing.Color.FromArgb(CType(CType(218, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(244, Byte), Integer))
         Me.c1GanttView1.VisualStyle = C1.Win.C1GanttView.VisualStyle.Office2010Blue
         '
+        'employeesBindingSource
+        '
+        Me.employeesBindingSource.DataMember = "Employees"
+        Me.employeesBindingSource.DataSource = Me.c1NWINDDataSet
+        '
+        'c1NWINDDataSet
+        '
+        Me.c1NWINDDataSet.DataSetName = "C1NWINDDataSet"
+        Me.c1NWINDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'employeesTableAdapter
         '
         Me.employeesTableAdapter.ClearBeforeFill = True
+        '
+        'c1NWINDDataSet1
+        '
+        Me.c1NWINDDataSet1.DataSetName = "C1NWINDDataSet1"
+        Me.c1NWINDDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'employeesBindingSource1
+        '
+        Me.employeesBindingSource1.DataMember = "Employees"
+        Me.employeesBindingSource1.DataSource = Me.c1NWINDDataSet1
+        '
+        'EmployeesTableAdapter1
+        '
+        Me.EmployeesTableAdapter1.ClearBeforeFill = True
         '
         'Form1
         '
@@ -2914,8 +2932,6 @@ Partial Class Form1
         Me.c1DockingTab2.ResumeLayout(False)
         Me.c1DockingTabPage3.ResumeLayout(False)
         CType(Me.c1FlexGrid1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.employeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.c1NWINDDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.c1DockingTabPage5.ResumeLayout(False)
         CType(Me.csMain.DataStorage.AppointmentStorage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.csMain.DataStorage.CategoryStorage, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2931,7 +2947,11 @@ Partial Class Form1
         CType(Me.c1GanttView1.DataStorage.ResourceStorage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.c1GanttView1.DataStorage.TasksStorage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.c1GanttView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.employeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.c1NWINDDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.c1ThemeController1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.c1NWINDDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.employeesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -3160,5 +3180,8 @@ Partial Class Form1
 	Private employeesBindingSource As System.Windows.Forms.BindingSource
 	Private employeesTableAdapter As C1NWINDDataSetTableAdapters.EmployeesTableAdapter
 	Private c1ThemeController1 As C1.Win.C1Themes.C1ThemeController
+   Private WithEvents c1NWINDDataSet1 As C1CommandBasedApp.C1NWINDDataSet1
+   Private WithEvents employeesBindingSource1 As BindingSource
+   Friend WithEvents EmployeesTableAdapter1 As C1CommandBasedApp.C1NWINDDataSet1TableAdapters.EmployeesTableAdapter
 End Class
 
