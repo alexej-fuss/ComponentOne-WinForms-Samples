@@ -82,6 +82,7 @@ Partial Public Class Form1
    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
       Dim path As String = Environment.GetFolderPath(Environment.SpecialFolder.Personal) & "\ComponentOne Samples\Common\"
+      Dim resources As ComponentResourceManager = New ComponentResourceManager(GetType(Form1))
 
       If File.Exists(path & "c1nwind.mdb") Then
          AppDomain.CurrentDomain.SetData("DataDirectory", path)
@@ -97,6 +98,8 @@ Partial Public Class Form1
          Me.c1FlexGrid1.DataSource = Me.employeesBindingSource
          Me.employeesTableAdapter.Fill(Me.c1NWINDDataSet.Employees)
       End If
+      Me.c1FlexGrid1.ColumnInfo = Resources.GetString("c1FlexGrid1.ColumnInfo")
+      Me.c1FlexGrid1.StyleInfo = Resources.GetString("c1FlexGrid1.StyleInfo")
       Me.c1FlexGrid1.EndUpdate()
 
       '
