@@ -66,6 +66,8 @@ Partial Public Class Form1
 													 _scheduleOptions.Office2003WeekView = Not _scheduleOptions.Office2003WeekView
 													 UpdateControls()
 												 End Sub
+		AddHandler Me.Load, New System.EventHandler(AddressOf Me.Form1_Load)
+
 	End Sub
 
 	Private Sub Form1_Load(sender As Object, e As EventArgs)
@@ -126,6 +128,7 @@ Partial Public Class Form1
 			ccmTheme.CommandLinks.Add(cl)
 		Next
 		ccmTheme.Text = String.Format("Theme: {0}", C1ThemeController.ApplicationTheme)
+
 	End Sub
 
 	''' <summary>
