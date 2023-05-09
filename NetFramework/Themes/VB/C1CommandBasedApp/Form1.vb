@@ -65,12 +65,15 @@ Partial Public Class Form1
 		AddHandler ccCSOffice2003WeekView.Click, Sub(s, e)
 													 _scheduleOptions.Office2003WeekView = Not _scheduleOptions.Office2003WeekView
 													 UpdateControls()
-												 End Sub
-		AddHandler Me.Load, New System.EventHandler(AddressOf Me.Form1_Load)
+															  End Sub
 
 	End Sub
 
-	Private Sub Form1_Load(sender As Object, e As EventArgs)
+	Private Sub Form1_Closing(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
+		Me.employeesTableAdapter.Adapter.Update(Me.c1NWINDDataSet.Employees)
+	End Sub
+
+	Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 		Dim path As String = Environment.GetFolderPath(Environment.SpecialFolder.Personal) & "\ComponentOne Samples\Common\"
 		If File.Exists(path & "c1nwind.mdb") Then
 			AppDomain.CurrentDomain.SetData("DataDirectory", path)
@@ -368,4 +371,9 @@ Partial Public Class Form1
 		target = value
 		Return value
 	End Function
+
+	Protected Overrides Sub Finalize()
+
+		MyBase.Finalize()
+	End Sub
 End Class
